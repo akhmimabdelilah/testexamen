@@ -22,7 +22,7 @@ public class Batiment {
 	private List<Escalier> escaliers;
 	@OneToMany(mappedBy = "batimentAscenseur", fetch = FetchType.EAGER)
 	private List<Ascenseur> ascenseurs;
-	@OneToMany(mappedBy = "batimentEtage",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "batimentEtage", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	private List<Etage> etages;
 
 	public Batiment() {
@@ -35,8 +35,6 @@ public class Batiment {
 		Adresse = adresse;
 	}
 
-	
-	
 	public List<Ascenseur> getAscenseurs() {
 		return ascenseurs;
 	}

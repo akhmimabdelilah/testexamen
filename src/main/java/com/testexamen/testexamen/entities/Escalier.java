@@ -11,7 +11,7 @@ public class Escalier {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int escalierNo;
-	
+
 	@ManyToOne
 	private Batiment batimentEscalier;
 
@@ -19,14 +19,12 @@ public class Escalier {
 		super();
 	}
 
-	public Escalier(int escalierNo,Batiment batimentEscalier) {
+	public Escalier(int escalierNo, Batiment batimentEscalier) {
 		super();
 		this.escalierNo = escalierNo;
-		this.batimentEscalier=batimentEscalier;
+		this.batimentEscalier = batimentEscalier;
 	}
 
-	
-	
 	public Batiment getBatiment() {
 		return batimentEscalier;
 	}

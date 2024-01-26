@@ -23,10 +23,10 @@ public class Piece {
 	private Etage pieceEtage;
 	@OneToMany(mappedBy = "piecePort", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Porte> portes;
-	
+
 	@ManyToOne
 	private Piece pieceParent;
-	@OneToMany(mappedBy = "pieceParent",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "pieceParent", fetch = FetchType.EAGER)
 	private List<Piece> piecesParent;
 
 	public Piece(int pieceNo, int nbOccupation, int nbFenetres, Etage pieceEtage) {
